@@ -1,0 +1,317 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-image: url("/img/Fondo.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    font-family: 'Roboto', sans-serif;
+}
+
+.titulo {
+    font-weight: bold;
+    font-size: 34px;
+    text-align: center;
+    letter-spacing: 15px;
+    color: #9DCFC5;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    margin: auto;    
+    display: block;
+}
+
+.boton1 {
+    position: absolute;
+    border: none;
+    background: none;
+    filter: drop-shadow(0px 15px 15px #79b1a6);
+    cursor: pointer;
+    margin: auto;
+    transition: transform .5s;
+    color: white;
+    left:6%;
+    top:30%;
+}
+
+.boton1:hover{
+    transform: scale(1.2);
+}
+
+.boton2 {
+    position: absolute;
+    border: none;
+    background: none;
+    filter: drop-shadow(0px 15px 15px #79b1a6);
+    cursor: pointer;
+    margin: auto;
+    transition: transform .5s;
+    color: white;
+    left:28%;
+    top:65%;
+}
+
+.boton2:hover{
+    transform: scale(1.2);
+}
+
+.boton3 {
+    position: absolute;
+    border: none;
+    background: none;
+    filter: drop-shadow(0px 15px 15px #79b1a6);
+    cursor: pointer;
+    margin: auto;
+    transition: transform .5s;
+    color: white;
+    left:41%;
+    top:42%;
+}
+
+.boton3:hover{
+    transform: scale(1.2);
+}
+
+.boton4 {
+    position: absolute;
+    border: none;
+    background: none;
+    filter: drop-shadow(0px 15px 15px #79b1a6);
+    cursor: pointer;
+    margin: auto;
+    transition: transform .5s;
+    color: white;
+    left:61%;
+    top:23%;
+}
+
+.boton4:hover{
+    transform: scale(1.2);
+}
+
+.boton5 {
+    position: absolute;
+    border: none;
+    background: none;
+    filter: drop-shadow(0px 15px 15px #79b1a6);
+    cursor: pointer;
+    margin: auto;
+    transition: transform .5s;
+    color: white;
+    left:65%;
+    top:59%;
+}
+
+.boton5:hover{
+    transform: scale(1.2);
+}
+
+.boton6 {
+    position: absolute;
+    border: none;
+    background: none;
+    filter: drop-shadow(0px 15px 15px #79b1a6);
+    cursor: pointer;
+    margin: auto;
+    transition: transform .5s;
+    color: white;
+    right:6%;
+    top:30%;
+}
+
+.boton6:hover{
+    transform: scale(1.2);
+}
+
+.boton7 {
+    position: absolute;
+    border: none;
+    background: none;
+    filter: drop-shadow(0px 15px 15px #79b1a6);
+    cursor: pointer;
+    margin: auto;
+    transition: transform .5s;
+    color: white;
+    right:8%;
+    top:50%;
+}
+
+.boton7:hover{
+    transform: scale(1.2);
+}
+
+.nav{
+    font-size: 13px;
+    font-style: normal;
+    font-family: 'Roboto';
+}
+
+.mi-cuenta {
+    background-color: #CB93F6;
+    color: white;
+    border: none;
+    width: 8.5%;
+    height: 40px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 12px;
+    position: absolute;
+    right: 3%;
+    top: 4%;
+    transition: all 0.3s ease 0s;
+}
+
+
+.mi-cuenta:hover {
+    background-color: #E5C6FE;
+}
+
+nav ul li:hover ul{
+    display: block;
+}
+
+.submenu {
+    position: absolute;
+    align-items: center;
+    display: none;
+    align-content: center;
+    right: 3.1%;
+    top:8%;
+    background: #E5C6FE;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+nav ul li ul a:hover {
+    background-color: #CB93F6;
+    border-radius: 10px;
+}
+
+.submenu li a {
+    display: block;
+    padding: 15px;
+    color: white;
+}
+
+.botonsub {
+    position: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: auto;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 56px;
+    height: 100vh;
+    background: #E5C6FE;
+    padding: 1.25rem 0.5rem 2rem;
+    transition: 0.5s;
+}
+
+nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.nav-inner {
+    margin-top: 5rem;
+}
+
+.nav-toggle {
+    position: absolute;
+    top: 1.1rem;
+    right: -0.5rem;
+    background: #CB93F6;
+    padding: 5px 9px;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.active {
+    color: white;
+}
+
+a:hover{
+    color: black;
+}
+
+.icon {
+    font-size: 20px;
+    color: white;
+    margin-right: 1rem;
+}
+
+.text {
+    font-weight: bold;
+}
+
+.show {
+    width: 250px;
+}
+
+.rotate {
+    transform:  rotate(180deg);
+    transition: 0.5s;
+}
+
+.boton-ingresar {
+    background-color: #CB93F6;
+    color: white;
+    cursor: pointer;
+    border: none;
+    width: 8.5%;
+    height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0;
+    padding: 12px;
+    transition: transform .5s;
+    position: absolute;
+    right: 3%;
+    top: 4%;
+}
+
+.boton-ingresar:hover{
+    transform: scale(1.2);
+}

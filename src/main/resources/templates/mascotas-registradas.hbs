@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mascotas Registradas</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script defer src="/js/index.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
+
+        <link rel="shortcut icon" href="https://res.cloudinary.com/rescatedepatitas08/image/upload/v1637687235/img/icono-patitas_c1xqq0.ico"/>
+
+        <link rel="stylesheet" href="/css/barra-menu.css">
+        <link rel="stylesheet" href="/css/mascotas-registradas.css">
+        <link rel="stylesheet" href="/css/reset.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,100&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+    <div class="container">
+        <header class="header">
+            <nav class="menu">
+                <a href="/" class="logo"><img src="https://res.cloudinary.com/rescatedepatitas08/image/upload/v1637687235/img/home-logo_nqrjnd.png"></a>
+                <button class="toggle"><i class="fas fa-bars"></i></button>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="/mascotas-en-adopcion">ADOPTAR</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="/dar-mascota-adopcion">DAR EN ADOPCIÓN</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="/reportar-mascota">REPORTAR</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="/mascotas-perdidas">MASCOTAS PERDIDAS</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link nav-menu-link_Active" href="/registrar-mascota">REGISTRAR MASCOTAS</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <h1 class="subtitulo">Mascotas Registradas</h1>
+
+        <div class="form1" id="appVue">
+            <div v-if="mascotasRegistradas.length > 0">
+                <div class="tabla">
+                    <div v-for="mascota in mascotasRegistradas">
+                        <div class="publicacion">
+                            <u class="titulo2">Nombre Mascota:</u>
+                            <i class="datos">{{mascota.nombreMascota}}<br></i>
+                            <u class="titulo2">Apodo Mascota:</u>
+                            <i class="datos">{{mascota.apodoMascota}}<br></i>
+                            <u class="titulo2">Edad Mascota:</u>
+                            <i class="datos">{{mascota.edadMascota}}<br></i>
+                            <u class="titulo2">Tipo de Animal:</u>
+                            <i class="datos">{{mascota.tipoAnimal}}<br></i>
+                            <u class="titulo2">Sexo Animal:</u>
+                            <i class="datos">{{mascota.sexoMascota}}<br></i>
+                            <u class="titulo2">Descripción:</u>
+                            <i class="datos">{{mascota.descripcionMascota}}<br></i>
+                            <u class="titulo2">Características:</u><br>
+                            <div v-for="caracteristica in mascota.caracteristicasMascota">
+                                <ul><i class="datos">{{caracteristica.caracteristica}}</i></ul>
+                            </div>
+
+                            <!-- Fotos -->
+                            <img class="img" src="https://res.cloudinary.com/rescatedepatitas08/image/upload/v1637687250/img/pantuflas_wopgw1.png" >
+                            <br><br>
+                            <button class="boton" v-on:click="darEnAdopcion(mascota.id)">Dar en Adopción</button>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+            </div>
+
+            <div v-else>
+                <div class="subtitulo3">¡No tiene mascotas registradas por el momento!<br><br><br>
+                    <img class="imgAviso" src="https://res.cloudinary.com/rescatedepatitas08/image/upload/v1637687238/img/jugando_con_la_cola_vxwwjm.png" >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/mascotas-registradas.js"></script>
+    </body>
+</html>
